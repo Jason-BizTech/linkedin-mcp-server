@@ -1,4 +1,12 @@
 {
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "dev": "tsx watch --env-file=.env src/index.ts",
+    "start": "node build/index.js",
+    "inspector": "npx @modelcontextprotocol/inspector"
+  }
+}
+{
   "name": "linkedin-mcp-server",
   "version": "0.1.0",
   "description": "MCP server for interacting with Linkedin Marketing API",
